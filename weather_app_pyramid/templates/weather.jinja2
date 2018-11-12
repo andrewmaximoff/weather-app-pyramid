@@ -1,0 +1,15 @@
+<!doctype html>
+<link rel="stylesheet" type="text/css" href="{{ request.static_url('weather_app_pyramid:static/style.css')}}">
+<div class="center-on-page">
+  <h1>Weather in a City</h1>
+  <form class="form-inline" method="POST" action="{{ request.route_url('result') }}">
+    <div class="select">
+      <select name="comp_select" class="selectpicker form-control">
+        {% for o in cities %}
+          <option value="{{ o.name }}">{{ o.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <button type="submit" class="btn">Go</button>
+  </form>
+</div>

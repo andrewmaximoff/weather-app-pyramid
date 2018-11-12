@@ -1,0 +1,3 @@
+[run]
+source = weather_app_pyramid
+omit = weather_app_pyramid/test*
